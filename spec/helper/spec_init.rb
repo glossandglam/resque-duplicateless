@@ -1,6 +1,6 @@
 # Load the basics
 require "resque"
-require "resque_unique_job"
+require "resque-duplicateless"
 require "spec_helper"
 
 # Setup Resque

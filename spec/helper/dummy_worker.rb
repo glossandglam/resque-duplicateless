@@ -1,6 +1,6 @@
 class DummyWorker
 
-  @queue = :queue_1
+  @queue = "ruj:rspec:queue_1"
   
   def self.perform
   end

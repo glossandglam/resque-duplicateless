@@ -33,7 +33,7 @@ describe ResqueDuplicateless do
     
     it "can enqueue the same job with the same params to two different queues" do
       Resque.enqueue_uniquely DummyWorker
-      Resque.enqueue_uniquely_to :queue_2, DummyWorker
+      Resque.enqueue_uniquely_to QUEUES[1], DummyWorker
       expect(Resque.size(QUEUES[0])).to eql(1)
       expect(Resque.size(QUEUES[1])).to eql(1)
     end
