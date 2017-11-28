@@ -1,5 +1,5 @@
 # We are going to make a extension that kludges a couple of methods into the Resque main object
-module ResqueUniqueJob
+module ResqueDuplicateless
   module Ext
     module Resque
       def unique_push(queue, item)
@@ -61,5 +61,5 @@ end
 
 # Perform the actual kludge
 module Resque
-  extend ResqueUniqueJob::Ext::Resque
+  extend ResqueDuplicateless::Ext::Resque
 end

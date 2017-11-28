@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "resque_unique_job/version"
+require "resque-duplicateless/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "resque_unique_job"
-  spec.version       = ResqueUniqueJob::VERSION
+  spec.name          = "resque-duplicateless"
+  spec.version       = ResqueDuplicateless::VERSION
   spec.authors       = ["Jeremy Linder"]
   spec.email         = ["jeremy@nomibeauty.com"]
 

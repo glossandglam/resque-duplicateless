@@ -1,6 +1,6 @@
 require "helper/spec_init"
 
-describe ResqueUniqueJob do
+describe ResqueDuplicateless do
   describe "Basic" do
     QUEUES = ["ruj:rspec:queue_1", "ruj:rspec:queue_2"]
     

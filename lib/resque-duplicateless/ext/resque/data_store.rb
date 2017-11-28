@@ -3,7 +3,7 @@
 # This is a little bit complicated because of how Resque is built. It uses an internal object known
 # as the QueueAccess object to actually interact with the queues. Because of this, we want to extend
 # those objects to follow their practices
-module ResqueUniqueJob
+module ResqueDuplicateless
   module Ext
     module Resque
       module DataStore
@@ -77,9 +77,9 @@ end
 # Now just kludge these methods in
 module Resque
   class DataStore
-    include ResqueUniqueJob::Ext::Resque::DataStore
+    include ResqueDuplicateless::Ext::Resque::DataStore
     class QueueAccess
-      include ResqueUniqueJob::Ext::Resque::DataStore::QueueAccess
+      include ResqueDuplicateless::Ext::Resque::DataStore::QueueAccess
     end
   end
 end

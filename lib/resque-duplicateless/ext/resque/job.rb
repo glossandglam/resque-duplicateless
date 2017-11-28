@@ -2,7 +2,7 @@
 #
 # This method will allow us to actually perform the correct type of queuing, IE whether
 #     we want to do a unique enqueue or not
-module ResqueUniqueJob
+module ResqueDuplicateless
   module Ext
     module Resque
       module Job
@@ -35,6 +35,6 @@ end
 # Now just kludge these methods in
 module Resque
   class Job
-    extend ResqueUniqueJob::Ext::Resque::Job
+    extend ResqueDuplicateless::Ext::Resque::Job
   end
 end
