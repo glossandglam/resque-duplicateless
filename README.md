@@ -43,9 +43,9 @@ After checking out the repo, run `bin/setup` to install dependencies. You can al
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-Please make sure to run `bundle exec rspec` if you make any changes to make sure they are not breaking. Rspec expects that there is a Redis process set up on the machine and makes use of the keys `queue_1` and `queue_1`
+Please make sure to run `bundle exec rspec` if you make any changes to make sure they are not breaking. Rspec expects that there is a Redis process set up on the machine and makes use of the keys `ruj:rspec:queue_1` and `ruj:rspec:queue_1`
 
-*WARNING* - The Rspec will delete everything on the `queue_1` and `queue_2` queues. Please make sure you don't need them for anything before testing or change the redis database in the `spec/helpers/spec_init.rb` file.
+*WARNING* - The Rspec will delete everything on the `ruj:rspec:queue_1` and `ruj:rspec:queue_2` queues. Please make sure you don't need them for anything before testing or change the redis database in the `spec/helpers/spec_init.rb` file.
 
 ## Contributing
 
