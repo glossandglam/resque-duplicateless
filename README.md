@@ -2,9 +2,9 @@
 
 Resque is awesome. It's great at queuing up lots of jobs and processing them offline. It works making use of Redis, which is extraordinarily fast.
 
-However, Resque makes use of Redis's lists, which means that the entries are not unique. And this is usually what we want. But sometimes it's not. 
+However, Resque makes use of Redis's lists, which means that the entries are not unique. There can exist duplicate entries in the queue. And this is usually what we want. But sometimes it's not. 
 
-ResqueUniqueJob gives us the option of uniquely adding a job to a queue. This will ensure that the job will only be added to the queue if no other job matching its class and arguments already exists on the queue.
+resque-duplicateless gives us the option of uniquely adding a job to a queue. This will ensure that the job will only be added to the queue if no other job matching its class and arguments already exists on the queue.
 
 ## Installation
 
